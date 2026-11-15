@@ -1,0 +1,37 @@
+name: CodeQL
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+  schedule:
+    - cron: "23 4 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  security-events: write
+
+jobs:
+  analyze:
+    name: Analyze C++
+    runs-on: windows-latest
+    steps:
+      # actions/checkout v7.0.1, verified stable release:
+      # https://github.com/actions/checkout/releases/tag/v7.0.1
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - name: Initialize CodeQL
+        # github/codeql-action v3.39.3, verified immutable stable release:
+        # https://github.com/github/codeql-action/releases/tag/v3.39.3
+        uses: github/codeql-action/init@9418214df1f2c4b8128c770156c409013b07d6b9
+        with:
+          languages: cpp
+          build-mode: manual
+      - name: Configure
+        run: cmake -S . -B build -A x64 -DBUILD_TESTING=ON
+      - name: Build
+        run: cmake --build build --config Release --parallel
+      - name: Analyze
+        # github/codeql-action v3.39.3, verified immutable stable release:
+        # https://github.com/github/codeql-action/releases/tag/v3.39.3
+        uses: github/codeql-action/analyze@9418214df1f2c4b8128c770156c409013b07d6b9

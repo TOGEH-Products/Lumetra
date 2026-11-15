@@ -1,0 +1,46 @@
+name: Bug report
+description: Report a reproducible problem with Lumetra.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not include credentials, private paths, raw logs, or identifying screenshots. For security issues, use the private reporting instructions in SECURITY.md.
+  - type: input
+    id: version
+    attributes:
+      label: Lumetra version
+      placeholder: "e.g. 0.2.0"
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version and architecture
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Sanitized diagnostics
+      description: Remove names, usernames, file paths, tokens, and other personal data before posting.

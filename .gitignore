@@ -1,0 +1,66 @@
+# CMake and compiler outputs
+/build/
+/out/
+/cmake-build-*/
+/.vs/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+install_manifest.txt
+build.ninja
+.ninja_*
+*.obj
+*.pdb
+*.ilk
+*.exp
+*.res
+*.log
+*.exe
+*.dll
+
+# Local agent / IDE configuration
+/.devin/
+/.kiro/
+/.vscode/
+CMakeUserPresets.json
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.local
+*.local.*
+local.settings.json
+
+# Local credentials and signing material
+.env
+.env.*
+*.env
+*.secret
+*.secrets
+*.token
+*.pfx
+*.p12
+*.pem
+*.key
+*.cer
+*.crt
+*.der
+*.p7b
+*.p7c
+*.p7s
+*.spc
+*.sst
+
+# Local reference applications and their private runtime/browser data.
+/BlurAutoClickerReference/
+/PlexusXReference/
+
+# Local display/screenshot diagnostics that can alter settings or launch binaries.
+/check_gamma.ps1
+/reset_display.ps1
+/screenshotfailedtest.ps1
+/test_saturation.ps1
+/test_stage2.ps1
+
+# Internal implementation investigation, not curated public documentation.
+/docs/PHASE5_REPORT.md

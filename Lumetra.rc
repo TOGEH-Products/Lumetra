@@ -1,0 +1,51 @@
+// Resources embedded into Lumetra.exe so the executable is self-contained
+// when copied or packaged for distribution.
+//
+// 101 ICON - the application icon.
+//
+// VS_VERSION_INFO - version metadata.
+//
+// ProductName and FileDescription provide friendly file metadata. The
+// Start Menu shortcut is installed separately to provide a friendly app
+// entry in Windows Search.
+//
+// Keep the version in step with project(VERSION) in CMakeLists.txt and with
+// the version label shown in the sidebar.
+
+// winver.h supplies the VS_FFI_*, VOS_* and VFT_* constants used below.
+#include <winver.h>
+
+101 ICON "Icon.ico"
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 0,2,0,0
+ PRODUCTVERSION 0,2,0,0
+ FILEFLAGSMASK VS_FFI_FILEFLAGSMASK
+#ifdef _DEBUG
+ FILEFLAGS VS_FF_DEBUG
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS VOS_NT_WINDOWS32
+ FILETYPE VFT_APP
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "TOGEH-Products"
+            VALUE "FileDescription", "Lumetra"
+            VALUE "FileVersion", "0.2.0.0"
+            VALUE "InternalName", "Lumetra"
+            VALUE "LegalCopyright", "Copyright (C) 2026 TOGEH-Products"
+            VALUE "OriginalFilename", "Lumetra.exe"
+            VALUE "ProductName", "Lumetra"
+            VALUE "ProductVersion", "0.2.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
