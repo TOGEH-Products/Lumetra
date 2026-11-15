@@ -1,21 +1,25 @@
 # Lumetra
 
-Lumetra is a native Windows desktop utility for applying display profiles when a selected application becomes the foreground window. It also provides screenshot capture and optional per-game resolution profiles.
+Lumetra is a native Windows desktop utility for applying display profiles when a selected application becomes the foreground window. It also provides screenshot capture, optional per-game resolution profiles, and Obsidian and Paper interface themes.
 
 ## Screenshots
 
-![Lumetra game profiles](docs/screenshots/main.png)
+![Lumetra Game Profiles in the Obsidian theme](docs/screenshots/MainTabObsidianTheme.png)
 
-![Lumetra profile editor](docs/screenshots/profile-editor.png)
+![Lumetra Game Profiles in the Paper theme](docs/screenshots/MainTabPaperTheme.png)
+
+![Lumetra profile editor in the Obsidian theme](docs/screenshots/GameProfileObsidianTheme.png)
+
+![Lumetra profile editor in the Paper theme](docs/screenshots/GameProfilePaperTheme.png)
 
 ## Features
 
-- Switch display profiles based on the foreground application, with editable gamma, brightness, contrast, saturation, vibrance, and hue values.
+- Apply saved display profiles when their configured applications become foreground, with controls for gamma, brightness, contrast, saturation, vibrance, and hue.
 - Restore the desktop baseline when no managed profile is active.
 - Capture the active window or selected monitor scope with configurable global and per-profile hotkeys.
 - Organize screenshots by profile and optionally copy captures to the clipboard.
 - Save resolution profiles and choose automatic switching, confirmation before applying, or Off (the default).
-- Choose between the Obsidian monochrome theme and the warm-light Paper theme.
+- Choose between the Obsidian monochrome theme and the warm-light Paper theme; the selection is saved in user preferences.
 - Manage the application from its settings window and system tray.
 
 Some display effects depend on Windows/display support. Lumetra does not claim HDR color management or per-monitor gamma application. It does not inject code into other processes; users remain responsible for following the terms of the software they run.
