@@ -23,7 +23,7 @@ jobs:
       - name: Initialize CodeQL
         # github/codeql-action v3.39.3, verified immutable stable release:
         # https://github.com/github/codeql-action/releases/tag/v3.39.3
-        uses: github/codeql-action/init@9418214df1f2c4b8128c770156c409013b07d6b9
+        uses: github/codeql-action/init@33d7b85da1a04171e211befe2c739303b9a4c066
         with:
           languages: cpp
           build-mode: manual
